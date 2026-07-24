@@ -1,0 +1,4 @@
+interface:
+  display_name: "Printable"
+  short_description: "Prepare documents for accurate duplex printing"
+  default_prompt: "Use $printable to create a print-ready PDF with a cover, verified TOC, and outside-edge page numbers."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "BW Printable"
+  short_description: "Make visuals survive grayscale printing"
+  default_prompt: "Use $bw-printable to make this document understandable when printed in grayscale."
