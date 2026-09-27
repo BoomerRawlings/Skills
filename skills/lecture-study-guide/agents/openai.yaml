@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lecture Study Guide"
+  short_description: "Collect lectures and build audited study guides"
+  default_prompt: "Use $lecture-study-guide to collect my lecture inputs and build a cited, printable study guide."
