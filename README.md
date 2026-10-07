@@ -23,6 +23,15 @@ Pair each explanation with its concrete artifact, then trace their relationships
 
 ```text
 skills/
+├── workflow-display/
+│   ├── SKILL.md
+│   ├── agents/openai.yaml
+│   ├── assets/
+│   ├── examples/
+│   ├── references/
+│   ├── scripts/
+│   ├── tests/
+│   └── demo.html
 ├── printable/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
@@ -46,15 +55,20 @@ Clone the repository and copy the skill folders you want into your Codex skills 
 
 ```powershell
 git clone https://github.com/BoomerRawlings/Skills.git
+Copy-Item -Recurse .\Skills\skills\workflow-display "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\Skills\skills\printable "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\Skills\skills\bw-printable "$env:USERPROFILE\.codex\skills\"
 Copy-Item -Recurse .\Skills\skills\lecture-study-guide "$env:USERPROFILE\.codex\skills\"
 python -m pip install -r .\Skills\requirements.txt
 ```
 
+`workflow-display` needs Node 18+ to build; it needs no Python packages. Viewing the generated HTML needs only a browser. The Python requirements above serve the document skills.
+
 `printable` currently requires Microsoft Word on Windows when converting DOCX input. PDF input does not require Word.
 
 ## Use
+
+Invoke `$workflow-display` with a workflow description, or point any agent at its [SKILL.md](skills/workflow-display/SKILL.md). For manual use, follow the [JSON-to-HTML quick start](skills/workflow-display/README.md).
 
 Attach a document, then invoke:
 
