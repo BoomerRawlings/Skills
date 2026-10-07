@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Display"
+  short_description: "Paired workflow steps with animated connections"
+  default_prompt: "Use $workflow-display to turn my workflow into paired explanations and artifacts with smooth unfolding and animated connections."

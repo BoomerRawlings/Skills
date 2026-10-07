@@ -6,11 +6,18 @@ Reusable Codex skills by Boomer Rawlings.
 
 | Skill | Purpose |
 | --- | --- |
+| [`workflow-display`](skills/workflow-display/) | Builds paired explanation/artifact displays with smooth reveals and animated, interactive connections. Includes a standalone HTML builder and editable examples. |
 | [`printable`](skills/printable/) | Adds a restrained cover, accurate table of contents, and outside-edge page numbers for duplex printing. |
 | [`bw-printable`](skills/bw-printable/) | Makes color-dependent visuals understandable in grayscale, then runs the full `printable` workflow. |
 | [`lecture-study-guide`](skills/lecture-study-guide/) | Collects lecture inputs and builds a cited, printable study guide with practice questions and separate source and visual audits. |
 
 Each skill has its own instructions, interface metadata, and scripts. `bw-printable` uses `printable`, but they remain separate skills and can be maintained independently.
+
+### Workflow Display
+
+[Try the interactive demo](https://boomerrawlings.com/workflow-display/) · [Download the complete kit](https://boomerrawlings.com/downloads/workflow-display.zip) · [Read the skill](skills/workflow-display/SKILL.md)
+
+Pair each explanation with its concrete artifact, then trace their relationships. Edit the example JSON and build a portable HTML page with Node 18+; no npm install, server, or AI account required. Or give an agent the [skill URL](https://github.com/BoomerRawlings/Skills/blob/main/skills/workflow-display/SKILL.md) and your workflow. [Quick start and customization](skills/workflow-display/README.md).
 
 ## Structure
 

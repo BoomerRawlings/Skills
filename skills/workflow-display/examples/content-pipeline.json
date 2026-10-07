@@ -1,0 +1,135 @@
+{
+  "eyebrow": "Workflow Display · Example",
+  "title": "From a useful idea to a published guide",
+  "description": "Follow the explanation and its working artifact together. Explore how the brief shapes drafting, review, publication, and reuse.",
+  "footer": "Fictional example. Replace the content and relationships with your own workflow.",
+  "plans": [
+    {
+      "id": "publish",
+      "title": "Publish a practical guide",
+      "summary": "Turn one reader question into a reviewed guide with a clear next action.",
+      "status": "Example workflow",
+      "steps": [
+        {
+          "id": "brief",
+          "title": "Define the reader's decision",
+          "description": "Choose one reader and the decision the guide should help them make. A narrow brief gives drafting and review the same target.",
+          "checkpoint": "The reader, question, and useful outcome fit in three lines.",
+          "artifact": {
+            "title": "Editorial brief",
+            "language": "text",
+            "code": "Reader: a first-time project contributor\nQuestion: Which issue should I start with?\nUseful outcome: select one bounded task and make a first contribution\nScope: issue labels, setup effort, and asking for context\nExclude: advanced architecture and release administration",
+            "note": "This brief is the review reference, not a claim about an existing project."
+          },
+          "related": []
+        },
+        {
+          "id": "draft",
+          "title": "Draft around the decision",
+          "description": "Build the guide around the reader's choice. Give concrete examples and preserve unknowns instead of inventing project-specific facts.",
+          "checkpoint": "Each section helps the reader choose or begin a task.",
+          "artifact": {
+            "title": "Drafting prompt",
+            "language": "prompt",
+            "code": "Use the editorial brief and the supplied project documentation.\nDraft a guide that helps a new contributor select one issue.\nInclude: a comparison of task sizes, one worked choice,\na setup checklist, and the next action.\nMark missing facts as [VERIFY]. Do not invent commands or policies."
+          },
+          "related": [
+            "brief"
+          ]
+        },
+        {
+          "id": "review",
+          "title": "Test the draft against the brief",
+          "description": "Check factual claims against the supplied documentation. Then ask whether a new contributor can make the intended decision without missing context.",
+          "checkpoint": "All verification markers are resolved or explicitly disclosed.",
+          "artifact": {
+            "title": "Review checklist",
+            "language": "checklist",
+            "code": "[ ] The guide answers the brief's question\n[ ] Setup steps match the current project docs\n[ ] The worked example explains the tradeoff\n[ ] Links point to the intended destination\n[ ] No unresolved [VERIFY] markers remain\n[ ] The next action is specific and achievable"
+          },
+          "related": [
+            "brief",
+            "draft"
+          ]
+        },
+        {
+          "id": "publish-guide",
+          "title": "Package the guide for readers",
+          "description": "Publish the reviewed guide with a title that matches the reader's question. Check the public page in the same form the reader will see.",
+          "checkpoint": "The page is readable on a narrow screen and its next-action link works.",
+          "artifact": {
+            "title": "Publication record",
+            "language": "text",
+            "code": "Title: Choose your first contribution\nSummary: Compare candidate issues and pick one bounded task.\nReader action: open the contributor issue list\nOwner: [editor]\nPublished URL: [add after publication]\nReview again when: onboarding instructions or issue labels change",
+            "note": "Fill in the record after publication; this example does not publish anything."
+          },
+          "related": [
+            "review"
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Use reader feedback to revise",
+          "description": "Record where readers hesitate. Change the brief when the question was wrong, or the guide when its answer was incomplete.",
+          "checkpoint": "Each revision maps to a concrete observation.",
+          "artifact": {
+            "title": "Feedback-to-change note",
+            "language": "text",
+            "code": "Observation: readers cannot estimate setup effort\nEvidence: [link or anonymized feedback]\nAffected decision: which issue is small enough to start\nProposed change: add setup-effort examples to the comparison\nCheck after revision: can a new reader explain the tradeoff?"
+          },
+          "related": [
+            "brief",
+            "publish-guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reuse",
+      "title": "Adapt a guide for another channel",
+      "summary": "Preserve the original claim and context while changing the format.",
+      "status": "Alternate workflow",
+      "steps": [
+        {
+          "id": "extract",
+          "title": "Choose one useful takeaway",
+          "description": "Select a single supported point from the reviewed guide. Keep enough context to avoid changing its meaning.",
+          "artifact": {
+            "title": "Takeaway card",
+            "language": "text",
+            "code": "Claim: a small first task includes manageable setup effort\nContext: issue scope alone does not reveal onboarding effort\nExample: a one-line fix can still require a complex local environment\nSource: [reviewed guide URL]\nDo not imply: every documentation task is easy"
+          },
+          "related": []
+        },
+        {
+          "id": "adapt",
+          "title": "Write for the destination",
+          "description": "Change length and structure to fit the channel while keeping the original point, its qualification, and its source.",
+          "artifact": {
+            "title": "Adaptation prompt",
+            "language": "prompt",
+            "code": "Turn the takeaway card into a short contributor-newsletter item.\nKeep the claim, the setup-effort caveat, and the guide link.\nUse a practical opening and one clear next action.\nDo not add statistics, endorsements, or promises."
+          },
+          "related": [
+            "extract"
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Compare with the source",
+          "description": "Review the adaptation beside the source card. A shorter version should still mean the same thing.",
+          "checkpoint": "The claim and qualification survive the format change.",
+          "artifact": {
+            "title": "Final comparison",
+            "language": "checklist",
+            "code": "[ ] Original claim preserved\n[ ] Important qualification retained\n[ ] No new unsupported facts\n[ ] Source link included\n[ ] Next action fits the destination channel"
+          },
+          "related": [
+            "extract",
+            "adapt"
+          ]
+        }
+      ]
+    }
+  ]
+}

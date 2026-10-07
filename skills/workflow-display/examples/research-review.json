@@ -1,0 +1,84 @@
+{
+  "eyebrow": "Workflow Display · Example",
+  "title": "Trace a decision back to its evidence",
+  "description": "Pair each research step with the question, evidence record, or decision artifact it produces. Follow the connections to see what supports what.",
+  "footer": "Fictional sample: replace observations with your own evidence before making decisions.",
+  "plans": [
+    {
+      "id": "review",
+      "title": "Review a product onboarding question",
+      "summary": "Investigate where first-time users stall, compare explanations, and record a testable decision.",
+      "status": "Illustrative process",
+      "steps": [
+        {
+          "id": "question",
+          "title": "Define the decision and uncertainty",
+          "description": "Frame a question narrow enough to investigate. State what decision it will inform and what the study cannot establish.",
+          "artifact": {
+            "title": "Research question",
+            "language": "text",
+            "code": "Decision: what to improve in first-project setup\nQuestion: where do new users lose confidence before creating a project?\nStudy scope: the first session, from welcome screen to saved project\nEvidence sought: observed hesitation, errors, and participant explanations\nNot established: population-wide prevalence or long-term retention"
+          },
+          "related": []
+        },
+        {
+          "id": "collect",
+          "title": "Record observations separately from interpretation",
+          "description": "Capture what happened and preserve a reference to the source. Keep your explanation distinct so later reviewers can challenge it.",
+          "checkpoint": "Each observation has a source reference and no unnecessary personal data.",
+          "artifact": {
+            "title": "Evidence record template",
+            "language": "text",
+            "code": "Evidence ID: E-01\nSource reference: [session note and timestamp]\nObservation: [what was said or done]\nContext: [task, screen, and relevant prior action]\nInterpretation: [possible explanation, clearly labeled]\nAlternative explanation: [what else could account for it]\nHandling: anonymize identifying details",
+            "note": "This is a template, not collected participant data."
+          },
+          "related": [
+            "question"
+          ]
+        },
+        {
+          "id": "synthesize",
+          "title": "Compare explanations against the evidence",
+          "description": "Group related observations, including contradictions. Keep references to the evidence so a finding remains inspectable.",
+          "artifact": {
+            "title": "Finding worksheet",
+            "language": "text",
+            "code": "Candidate finding: [one specific pattern]\nSupporting evidence: [E-01, E-04, ...]\nContradicting evidence: [E-03, ...]\nPossible explanation: [hypothesis]\nConfidence and limits: [sample, context, and unresolved questions]\nDecision relevance: [how this informs the original question]"
+          },
+          "related": [
+            "collect",
+            "question"
+          ]
+        },
+        {
+          "id": "decide",
+          "title": "Record a reversible next step",
+          "description": "Choose a small change that addresses the supported finding. Write down the evidence and the observation that would make you reconsider.",
+          "artifact": {
+            "title": "Decision record",
+            "language": "text",
+            "code": "Decision: [specific change to test]\nWhy now: [finding and evidence IDs]\nAlternative considered: [other viable option]\nAssumption: [what must hold for this change to help]\nSuccess observation: [observable behavior, not a vague goal]\nReconsider if: [counterevidence]\nOwner and review date: [assign before starting]"
+          },
+          "related": [
+            "synthesize",
+            "question"
+          ]
+        },
+        {
+          "id": "revisit",
+          "title": "Revisit the decision after testing",
+          "description": "Compare the new observations with the recorded assumption. Keep, revise, or reverse the change and preserve the reason.",
+          "artifact": {
+            "title": "Follow-up note",
+            "language": "text",
+            "code": "Decision reviewed: [record ID]\nNew evidence: [source references]\nExpected behavior: [from decision record]\nObserved behavior: [what happened]\nConclusion: keep / revise / reverse\nReason: [evidence-based explanation]\nNext question: [remaining uncertainty]"
+          },
+          "related": [
+            "decide",
+            "collect"
+          ]
+        }
+      ]
+    }
+  ]
+}
